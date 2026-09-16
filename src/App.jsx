@@ -376,17 +376,14 @@ function App() {
                     style={{ transform: 'translateZ(-20px) rotate(-30deg)' }}
                   />
 
-                  {/* FOTO DEL ANILLO EN 3D */}
+                  {/* Gema 3D facetada interactiva */}
                   <div 
-                    className="relative w-56 h-56 flex items-center justify-center transition-transform duration-1000"
+                    className={`relative w-28 h-36 bg-gradient-to-tr ${joya3DActual.colorGema} rounded-[45%_45%_55%_55%] shadow-2xl flex items-center justify-center overflow-hidden border border-white/60 transition-colors duration-1000`}
                     style={{ transform: 'translateZ(50px)' }}
                   >
-                    <img 
-                      src={joya3DActual.imagen} 
-                      alt="Joya 3D" 
-                      className="w-full h-full object-contain drop-shadow-2xl transition-all duration-700"
-                      style={{ mixBlendMode: 'multiply' }}
-                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-transparent to-black/30 pointer-events-none" />
+                    <div className="w-1.5 h-24 bg-white/70 blur-[1px] rotate-12 transform -translate-x-2" />
+                    <span className="text-white text-xl animate-pulse">✦</span>
                   </div>
 
                   {/* Corona inferior de alambre */}
