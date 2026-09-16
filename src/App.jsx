@@ -522,15 +522,19 @@ function App() {
                         </div>
 
                         {/* CONTENEDOR FOTOGRAFÍA */}
-                        <div className="h-52 relative flex items-center justify-center overflow-hidden rounded-xl bg-[#F9F6FC] mb-5 shadow-inner border border-[#EAE1F0]">
-                          <img 
-                            src={prod.imagen} 
-                            alt={prod.nombre}
-                            className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700 ease-out"
-                            onError={(e) => {
-                              e.target.src = 'https://placehold.co/600x400/EAE1F0/533263?text=Sin\\nFoto';
-                            }}
-                          />
+                        <div className="flex justify-center mb-5 mt-2">
+                          <div className="w-48 h-48 relative flex items-center justify-center overflow-hidden rounded-full shadow-lg border-4 border-[#F9F6FC] ring-1 ring-[#DCD0E8]">
+                            <img 
+                              src={prod.imagen} 
+                              alt={prod.nombre}
+                              className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700 ease-out"
+                              onError={(e) => {
+                                e.target.src = 'https://placehold.co/600x400/EAE1F0/533263?text=Sin\\nFoto';
+                              }}
+                            />
+                            {/* Filtro suave para darle un toque más cálido */}
+                            <div className="absolute inset-0 bg-[#422650]/5 pointer-events-none rounded-full mix-blend-overlay"></div>
+                          </div>
                         </div>
                       </div>
 
