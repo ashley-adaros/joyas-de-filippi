@@ -237,7 +237,7 @@ function App() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1, ease: "easeOut" }}
-            className="font-serif-vintage text-6xl sm:text-7xl md:text-8xl text-[#422650] leading-[1.1]"
+            className="font-serif-vintage text-5xl sm:text-7xl md:text-8xl text-[#422650] leading-[1.1]"
           >
             Joyas hechas<br/>con el <span className="italic text-[#8B5A96]">alma</span>.
           </motion.h1>
@@ -316,8 +316,8 @@ function App() {
           </div>
 
           {/* ESCENARIO DE GIRO 3D */}
-          <div className="lg:col-span-6 flex flex-col items-center">
-            <div className="relative w-72 h-72 sm:w-88 sm:h-88 flex items-center justify-center">
+          <div className="lg:col-span-6 flex flex-col items-center mt-10 lg:mt-0">
+            <div className="relative w-full max-w-[280px] h-[280px] sm:max-w-[350px] sm:h-[350px] flex items-center justify-center transform scale-90 sm:scale-100">
               
               {/* Aura giratoria exterior */}
               <div 
@@ -425,7 +425,7 @@ function App() {
             <div className="w-12 h-0.5 bg-[#D4A373] mx-auto mt-2" />
           </motion.div>
 
-          <motion.div variants={staggerContainer} className="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
+          <motion.div variants={staggerContainer} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 text-center">
             {[
               { t: "Macramé", d: "Microhilo encerado brasilero", i: "🧶" },
               { t: "Alambrismo", d: "Filigrana en cobre y baño de oro", i: "🌀" },
@@ -457,16 +457,16 @@ function App() {
         variants={fadeUp}
         className="py-20 max-w-6xl mx-auto px-6"
       >
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 text-center md:text-left">
           <div>
             <span className="text-[10px] tracking-[0.25em] uppercase text-[#B37F5A] font-bold">Colección de Autor</span>
-            <h3 className="font-serif-vintage text-3xl sm:text-5xl text-[#422650]">Catálogo Oficial</h3>
+            <h3 className="font-serif-vintage text-4xl sm:text-5xl text-[#422650]">Catálogo Oficial</h3>
             <p className="text-xs text-[#796B80] mt-1">
               Haz clic en el botón <strong>↻ Detalles</strong> para voltear la ficha técnica.
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 justify-center md:justify-end">
             {["Todos", "Alambrismo", "Macramé", "Piedras Naturales", "Cristales", "Acero"].map(cat => (
               <motion.button
                 whileHover={{ scale: 1.05 }}
